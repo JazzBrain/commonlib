@@ -29,21 +29,16 @@
  cd  ..\..\bin\
 
 
- #QT相关的dll可能需要自己编译生成。
+
  copy %MINGW_DLL%\glew32.dll .\ /y
  copy %MINGW_DLL%\libtiff.dll .\ /y
  copy %MINGW_DLL%\openvr_api.dll .\ /y
  copy %MINGW_DLL%\SDL2.dll .\ /y
  copy %MINGW_DLL%\libteem.dll .\ /y
-  copy %MINGW_DLL%\QtCore4.dll .\ /y
+ copy %MINGW_DLL%\QtCore4.dll .\ /y
  copy %MINGW_DLL%\QtGui4.dll .\ /y
  copy %MINGW_DLL%\QtNetwork4.dll .\ /y
  copy %MINGW_DLL%\QtOpenGL4.dll .\ /y
  copy %MINGW_DLL%\QtXML4.dll .\ /y
-
-
  copy ..\v3d_main\v3d\release\vaa3d.exe .\  /y
 
-
-
- cd ../
