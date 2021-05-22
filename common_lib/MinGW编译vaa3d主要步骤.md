@@ -1,6 +1,8 @@
 ## MinGW编译vaa3d主要步骤
 
-tiff 以及设置什么环境变量和原始教程步骤一样，不赘述
+参考原始教程设置环境变量以及boost，tiff
+不同的在于QMAKESPEC=win32-g++
+cmake tiff的时候需要选择MinGW Makefile
 
 #### 1 安装QT4
 
@@ -12,7 +14,7 @@ https://blog.csdn.net/trouble_makers/article/details/77944438
 
 安装成功之后，设置环境变量。**并且将这五个dll移到../v3d_external/v3d_main/common_lib/mingw_dll文件夹中，方便脚本处理**。
 
-qt编译完成后，需要将**\mkspecs\win32-g++\qmake.conf**修改的**QMAKE_CXXFLAGS**换成原来的。让其支持c++11。
+qt编译完成后，需要将\mkspecs\win32-g++\qmake.conf修改的**QMAKE_CXXFLAGS**换成原来的。让其支持c++11。
 
 #### 2 下载mingw8.1
 
