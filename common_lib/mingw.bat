@@ -1,19 +1,3 @@
-
- echo -----------------------------------------------------------------
- echo This is a shell program to build the v3d program for win32(mingw)
- echo Based on Mac version by Hanchuan Peng
- echo 2008-09-17, by Zongcai Ruan, created
- :: 2008-09-20, by Zongcai Ruan, add PATH, VPATH
- :: 2008-09-21, by Zongcai Ruan, add *_DIR
- :: 2008-09-29, by Zongcai Ruan, del QT_DIR, add copy
- :: 2009-01-13, by Zongcai Ruan, fixed for -B
- echo.
- echo Usage: build.bat 
- echo Usage: build.bat clean 
- echo Usage: build.bat -B
- echo -----------------------------------------------------------------
- ::echo on
-
  set MINGW_DLL=%CD%\common_lib\mingw_dll
  set MINGW_DIR=C:\Program Files\mingw-w64\x86_64-8.1.0-win32-sjlj-rt_v6-rev0\mingw64
  :: set LOCAL_DIR=c:/msys/local
@@ -21,10 +5,6 @@
 
  set PATH=%PATH%;%MINGW_DIR%/bin;%LOCAL_DIR%/bin
  set VPATH=%LOCAL_DIR%/include;%LOCAL_DIR%/lib_win32
-
-
-
-
 
  cd v3d
  qmake vaa3d.pro  %DEF_QT5% 
@@ -49,7 +29,7 @@
  cd  ..\..\bin\
 
 
-
+ #QT相关的dll可能需要自己编译生成。
  copy %MINGW_DLL%\glew32.dll .\ /y
  copy %MINGW_DLL%\libtiff.dll .\ /y
  copy %MINGW_DLL%\openvr_api.dll .\ /y
